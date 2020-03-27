@@ -12,9 +12,10 @@ dir = os.getcwd()
 TS_data = pd.read_csv(dir+"/data/insilico_size100_4_timeseries.tsv", sep='\t').values
 SS_data_1 = pd.read_csv(dir+"/data/insilico_size100_4_knockouts.tsv", sep='\t').values
 SS_data_2 = pd.read_csv(dir+"/data/insilico_size100_4_knockdowns.tsv", sep='\t').values
-
+SS_data_3 = pd.read_csv(dir+"/data/insilico_size10_5_multifactorial.tsv", sep='\t').values
+SS_data_4 = pd.read_csv(dir+"/data/insilico_size10_5_dualknockouts.tsv", sep='\t').values
 # get the steady-state data
-SS_data = np.vstack([SS_data_1, SS_data_2])
+SS_data = np.vstack([SS_data_1, SS_data_2,SS_data_3,SS_data_4])
 
 i = np.arange(0, 85, 21)
 j = np.arange(21, 106, 21)
